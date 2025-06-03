@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  backend:
+    build: .
+    container_name: drf-api
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/firebase-credentials.json
